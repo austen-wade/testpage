@@ -1,0 +1,47 @@
+.testimonial-section
+    margin: 0 10px
+    @include center
+
+    .title
+        border-bottom: 1px solid $black
+        padding: 30px 70px
+        font:
+            weight: 300
+
+        @media (max-width: 760px)
+            padding-left: 0
+            padding-right: 0
+
+    .testimonial-wrapper
+        display: flex
+        padding: 30px 70px
+
+        @media (max-width: 760px)
+            flex-direction: column
+            padding-left: 0
+            padding-right: 0
+
+            .testimonial + .testimonial
+                margin-top: 20px
+
+        .testimonial
+            flex: 1
+            margin: 0 10px
+            padding: 20px 20px
+            border-left: solid 5px $light-gray
+            background-color: $lighter-gray
+            font-size: 14px
+
+            .text
+                color: $gray
+                line-height: 1.6
+
+            .author
+                color: $dark-gray
+                float: right
+                margin-top: 20px
+                text-transform: uppercase
+                letter-spacing: 0.5px
+                font:
+                    size: 12px
+                    weight: 700

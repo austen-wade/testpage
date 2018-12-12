@@ -1,0 +1,11 @@
+.main-content
+    display: flex
+    @include page-margin
+    @include center
+
+    @media (max-width: 760px)
+        flex-direction: column
+
+    .steps,
+    .contact
+        margin: 20px 0

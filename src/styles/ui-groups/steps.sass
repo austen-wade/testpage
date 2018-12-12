@@ -1,0 +1,41 @@
+.steps
+    padding: 25px 50px
+    flex: 2
+
+    @media (max-width: 760px)
+        padding-left: 0
+        padding-right: 0
+
+    > .text
+        color: $gray
+        line-height: 1.4
+        max-width: 500px
+        margin-bottom: 50px
+
+        @media (max-width: 760px)
+            font-size: 18px
+
+    .title
+        border-bottom: 1px solid $black
+        display: flex
+        align-items: center
+        padding-bottom: 10px
+        padding-right: 75px
+        line-height: 1.4
+
+        .text
+            margin-left: 20px
+            font-size: 24px
+
+    .steps-list
+        padding: 0 10px
+        list-style: none
+
+        .step
+            font-size: 18px
+
+        .step + .step
+            margin-top: 40px
+
+            @media (max-width: 760px)
+                margin-top: 30px
