@@ -1,0 +1,268 @@
+$red: #B20636
+$green: #ACBCBB
+$white: #fff
+$black: #000
+$light-gray: #bbb
+$lighter-gray: #ddd
+$gray: #777
+$dark-gray: #444;
+$darker-gray: #222;
+
+@mixin page-margin
+    margin: 0 15px
+
+@mixin center
+    max-width: 1080px
+    margin: 0 auto
+
+    @media (max-width: 1095px)
+        margin: 0 15px
+
+html
+    font-family: Arial, Helvetica, sans-serif
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+    margin: 0
+
+a
+    color: $red
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+.btn
+    background-color: transparent
+    border: 1px solid $red
+    color: $red
+    cursor: pointer
+    padding: 12px 10px
+    text-transform: uppercase
+    letter-spacing: 0.5px
+    transition: background-color 100ms, color 100ms
+    font:
+        weight: 800
+        size: 10px
+
+    &:hover
+        background-color: $red
+        color: $white
+
+.header
+    display: flex
+    align-items: center
+    height: 80px
+    @include page-margin
+
+    > .phone-link
+        margin-left: auto
+        font-size: 24px
+
+.hero-wrapper
+    display: flex
+    background-color: $light-gray
+    justify-content: center
+    height: 400px
+    overflow: hidden
+    @include page-margin
+
+.hero
+    width: 100%
+    height: 100%
+    background:
+        image: url("./assets/girl-on-phone.jpg")
+        repeat: no-repeat
+        position: top right
+    @include center
+    @media (max-width: 1095px)
+        margin: 0
+
+    .hero-content
+        text-align-last: left
+        color: $white
+        position: absolute
+        padding: 25px 50px
+
+        .hero-title
+            line-height: 1.2
+            max-width: 350px
+            text-transform: uppercase
+            font:
+                size: 54px
+                weight: 300
+
+        .hero-text
+            line-height: 1.5
+            font-size: 18px
+            max-width: 500px
+            margin-top: 25px
+
+        @media (max-width: 760px)
+            padding: 25px 20px
+
+            .hero-title
+                font-size: 48px
+
+.main-content
+    display: flex
+    @include page-margin
+    @include center
+
+    @media (max-width: 760px)
+        flex-direction: column
+
+    .steps,
+    .contact
+        margin: 20px 0
+    .steps
+        padding: 25px 50px
+        flex: 2
+
+        @media (max-width: 760px)
+            padding-left: 0
+            padding-right: 0
+    .contact
+        background-color: $light-gray
+        flex: 1
+
+.steps
+    .steps-text
+        line-height: 1.4
+        color: $gray
+        max-width: 500px
+        margin-bottom: 50px
+    .steps-title
+        border-bottom: 1px solid $black
+        display: flex
+        align-items: center
+        padding-bottom: 10px
+        padding-right: 75px
+        line-height: 1.4
+
+        .text
+            margin-left: 20px
+            font-size: 24px
+    .steps-list
+        padding: 0 10px
+        list-style: none
+        .step
+            font-size: 18px
+        .step + .step
+            margin-top: 35px
+
+.contact
+    padding: 30px
+
+    .title
+        color: $darker-gray
+        line-height: 1.4
+        margin-bottom: 10px
+        font:
+            size: 22px
+            weight: 300
+    .text
+        line-height: 1.4
+        color: $dark-gray
+        font-size: 14px
+        margin-bottom: 40px
+    .form
+        .form-element
+            padding: 10px 8px
+            display: block
+            font-size: 12px
+
+            &.input
+                border: 1px solid $gray
+                width: calc(100% - 16px)
+
+        textarea
+            font-family: Arial, Helvetica, sans-serif
+            border: 1px solid $gray
+            width: calc(100% - 16px)
+            min-height: 40px
+            margin-bottom: 15px
+            &::placeholder
+                color: $darker-gray
+
+        .form-element + .form-element
+            margin-top: 10px
+
+.testimonial-section
+    margin: 0 10px
+    @include center
+
+    .title
+        border-bottom: 1px solid $black
+        padding: 30px 70px
+        font:
+            weight: 300
+        @media (max-width: 760px)
+            padding-left: 0
+            padding-right: 0
+
+    .testimonial-wrapper
+        display: flex
+        padding: 30px 70px
+
+        @media (max-width: 760px)
+            flex-direction: column
+
+            .testimonial + .testimonial
+                margin-top: 20px
+        @media (max-width: 760px)
+            padding-left: 0
+            padding-right: 0
+
+        .testimonial
+            flex: 1
+            margin: 0 10px
+            padding: 20px 20px
+            border-left: solid 5px $light-gray
+            background-color: $lighter-gray
+            font-size: 14px
+
+            .text
+                color: $gray
+                line-height: 1.6
+
+            .author
+                color: $dark-gray
+                float: right
+                margin-top: 20px
+                text-transform: uppercase
+                letter-spacing: 0.5px
+                font:
+                    size: 12px
+                    weight: 700
+
+.footer
+    background-color: $gray
+    color: $white
+    padding: 50px 110px
+
+    @media (max-width: 760px)
+        padding-left: 15px
+        padding-right: 15px
+        padding-bottom: 80px
+
+    .footer-title
+        margin-bottom: 10px
+        font:
+            size: 24px
+            weight: 300
+
+    .footer-text
+        line-height: 1.6
+        max-width: 780px
+        font:
+            size: 14px
+
+    .footer-number
+        color: white
