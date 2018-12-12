@@ -4,6 +4,7 @@
   "description": "## Instructions 1. Fork this repo",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "dev": "webpack --watch"
   },
   "repository": {

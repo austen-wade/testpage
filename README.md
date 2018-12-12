@@ -1,3 +1,6 @@
+# Build and view project
+After cloning, run `cd testpage && npm i && npm run build`
+
 # Build a page
 
 ## Instructions
