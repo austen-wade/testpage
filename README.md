@@ -1,6 +1,9 @@
 # Build and view project
 After cloning, run `cd testpage && npm i && npm run build`
 
+Or view the project at this URL
+[http://chg-testpage.surge.sh](http://chg-testpage.surge.sh)
+
 # Build a page
 
 ## Instructions

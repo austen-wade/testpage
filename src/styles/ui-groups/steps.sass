@@ -1,8 +1,13 @@
 .steps
     padding: 25px 50px
     flex: 2
+    margin: 20px 0
 
-    @media (max-width: 760px)
+    @media (min-width: 761px) and (max-width: 1024px)
+        flex: 1
+        margin-right: 20px
+
+    @media (max-width: 1024px)
         padding-left: 0
         padding-right: 0
 
@@ -12,7 +17,7 @@
         max-width: 500px
         margin-bottom: 50px
 
-        @media (max-width: 760px)
+        @media (max-width: 1024px)
             font-size: 18px
 
     .title
@@ -37,5 +42,5 @@
         .step + .step
             margin-top: 40px
 
-            @media (max-width: 760px)
+            @media (max-width: 1024px)
                 margin-top: 30px
